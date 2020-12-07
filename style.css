@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  height: 100vh;
+  background: url(./images/pattern-curve.svg) bottom left no-repeat;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+}
+
+.endorsement-card {
+  display: none;
+  max-height: 667px;
+}
+
+.endorsement-card--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.endorsement-card__endorsement {
+  width: 311px;
+  background: url(./images/pattern-quotes.svg) top center no-repeat;
+  background-size: 60px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.endorsement__quote {
+  
+  margin-top: 25px;
+}
+
+.endorsement__name {
+  margin-top: 19px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--dark-blue);
+}
+
+.endorsement__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--grayish-blue);
+}
+
+.endorsement-card__photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+  width: 327px;
+  height: 308px;
+  margin: 24px 24px 32px 24px;
+  background: url(./images/pattern-bg.svg) center;
+  background-size: cover;
+}
+
+.endorsement-card__photo img {
+  width: 254px;
+  height: 254px;
+  border-radius: 5px;
+}
