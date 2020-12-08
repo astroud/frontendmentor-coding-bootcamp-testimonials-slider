@@ -5,7 +5,7 @@ const prevButton = document.querySelector('.slider-buttons__prev');
     handlePrevButton = () => {
       let activeEndorsement = document.querySelector('.endorsement-card--active');
       
-      if (activeEndorsement.previousElementSibling) {
+      if (activeEndorsement.previousElementSibling.classList.contains('endorsement-card')) {
         activeEndorsement.classList.remove('endorsement-card--active');
         activeEndorsement.previousElementSibling.classList.add('endorsement-card--active');
       }
