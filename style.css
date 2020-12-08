@@ -14,6 +14,7 @@
 body {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container {
@@ -75,7 +76,7 @@ body {
   width: 327px;
   height: 308px;
   margin: 24px 24px 32px 24px;
-  background: url(./images/pattern-bg.svg) center;
+  background: url(./images/pattern-bg.svg) center no-repeat;
   background-size: cover;
 }
 
@@ -83,18 +84,21 @@ body {
   width: 254px;
   height: 254px;
   border-radius: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .slider-buttons {
   display: flex;
+  align-content: stretch;
   position: absolute;
   top: 287px;
   left: calc(50% - 40px);
   width: 80px;
   height: 40px;
+  z-index: 1000;
 }
 
-.slider-buttons__prev, .slider-buttons__next {  
+.slider-buttons__prev, .slider-buttons__next {
   width: 40px;
   height: 40px;
   border: none;
@@ -108,6 +112,7 @@ body {
 }
 
 .slider-buttons__next {
+  margin-left: -1px;
   border-radius: 0 28px 28px 0;
   background: url(./images/icon-next.svg) center no-repeat #FFFFFF;
   background-size: 10px;
@@ -117,4 +122,91 @@ body {
 .slider-buttons__prev:hover, .slider-buttons__next:hover {  
   background-size: 7px;
   box-shadow: 0px 15px 20px -10px rgba(36, 36, 113, 0.3991313);
+}
+
+
+
+
+@media screen and (min-width: 1350px) {
+  body {
+    margin-top: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    max-height: 800px;
+    background: url(./images/pattern-curve-desktop.svg) bottom left no-repeat;
+  }
+
+  .endorsement-card {
+    margin-top: 50px;
+  }
+
+  .endorsement-card--active {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .endorsement-card__endorsement {
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    background: none;
+    font-size: clamp(18px, 2.22vw , 32px);
+    line-height: 44px;
+    text-align: left;
+    z-index: 1000;
+  }
+  
+  .endorsement__quote {
+    background: url(./images/pattern-quotes.svg) top left 95px no-repeat;
+    background-size: 120px 100px;
+    margin-top: 29vh;
+    padding-top: 8vh;
+    margin-right: -200px;
+    margin-left: 166px;
+    margin-bottom: 25px;
+  }
+  
+  .endorsement__name {
+    display: inline;
+    font-size: 20px;
+    line-height: 38px;
+    margin-left: 166px;
+  }
+  
+  .endorsement__title {
+    display: inline;
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  .endorsement-card__photo {
+    order: 0;
+    width: 696px;
+    height: 800px;
+    margin-left: 71px;
+    background-size: contain;
+  }
+
+  .endorsement-card__photo img {
+    width: 78%;
+    height: auto;
+    margin-left: -22px;
+    margin-top: 10px;
+  }
+
+  .slider-buttons {
+    top: 625px;
+    left: 55.4%;
+    width: 112px;
+    height: 56px;
+  }
+
+  .slider-buttons__prev, .slider-buttons__next {  
+    width: 56px;
+    height: 56px;
+    background-size: 13px;
+  }
 }
