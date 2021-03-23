@@ -1,6 +1,10 @@
 # Frontend Mentor - Coding Bootcamp Testimonials Slider
 
+A Testimonials Slider react component
+
 ![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
+
+Bootstrapped with [template-react-refactor](https://github.com/astroud/template-react-refactor) repo for rapidly refactoring older HTML+CSS projects to React + Styled Components.
 
 ## Welcome! 👋
 
@@ -16,7 +20,7 @@ Your challenge is to build out this testimonial slider and get it looking as clo
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to: 
+Your users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - Navigate the slider using either their mouse/trackpad or keyboard
@@ -25,7 +29,7 @@ Want some support on the challenge? [Join our Slack community](https://www.front
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to. 
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to.
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 
