@@ -36,7 +36,7 @@ export const Quote = styled.p`
   font-weight: 300;
   font-size: clamp(1.125rem, 2.222vw, 2rem);
   line-height: clamp(1.5rem, 3.06vw, 2.75rem);
-  margin-top: 34.75vh;
+  margin-top: 17.375rem;
   
   position: relative;
   left: 11.5vw;

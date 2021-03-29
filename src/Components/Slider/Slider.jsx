@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import {
   StyledSlider, Quote, Byline, Name, Title, Photo,
 } from './Slider.elements'
+import SliderButtons from '../SliderButtons/SliderButtons'
 
 const Slider = ({ testimonials, large }) => (
   <StyledSlider large={large}>
     <Photo src={testimonials[0].photo} large={large} />
+    <SliderButtons large={large} />
     <Quote large={large}>{testimonials[0].quote}</Quote>
     <Byline large={large}>
       <Name large={large}>
