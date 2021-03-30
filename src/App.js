@@ -43,7 +43,7 @@ function App() {
       <StyledWrapper>
         <Slider testimonials={TESTIMONIALS} large />
         <div style={{ height: '10rem' }} />
-        <Slider testimonials={TESTIMONIALS.slice(1)} small />
+        <Slider testimonials={[...TESTIMONIALS].reverse()} small />
       </StyledWrapper>
     </>
   )

@@ -1,24 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import {
   StyledSlider, Quote, Byline, Name, Title, Photo,
 } from './Slider.elements'
 import SliderButtons from '../SliderButtons/SliderButtons'
 
-const Slider = ({ testimonials, large }) => (
-  <StyledSlider large={large}>
-    <Photo src={testimonials[0].photo} large={large} />
-    <SliderButtons large={large} />
-    <Quote large={large}>{testimonials[0].quote}</Quote>
-    <Byline large={large}>
-      <Name large={large}>
-        {testimonials[0].name}
-        <Title large={large}>{testimonials[0].title}</Title>
-      </Name>
+const Slider = ({ testimonials, large }) => {
+  const [slideIndex, setSlideIndex] = useState(0)
 
-    </Byline>
-  </StyledSlider>
-)
+  return (
+    <StyledSlider large={large}>
+      <Photo src={testimonials[slideIndex].photo} large={large} />
+      <SliderButtons
+        slideIndex={slideIndex}
+        setSlideIndex={setSlideIndex}
+        slideCount={testimonials.length}
+        large={large}
+      />
+      <Quote large={large}>{testimonials[slideIndex].quote}</Quote>
+      <Byline large={large}>
+        <Name large={large}>
+          {testimonials[slideIndex].name}
+          <Title large={large}>{testimonials[slideIndex].title}</Title>
+        </Name>
+
+      </Byline>
+    </StyledSlider>
+  )
+}
 
 Slider.defaultProps = {
   large: false,
