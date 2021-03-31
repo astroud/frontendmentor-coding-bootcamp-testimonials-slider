@@ -29,8 +29,8 @@ const SliderButtons = ({
 
   return (
     <ButtonsWrapper large={large}>
-      <LeftButton large={large} onClick={handleClickLeft} name="previous slide" />
-      <RightButton large={large} onClick={handleClickRight} name="next slide" />
+      <LeftButton large={large} onClick={handleClickLeft} name="previous slide" aria-label="previous slide" />
+      <RightButton large={large} onClick={handleClickRight} name="next slide" aria-label="next slide" />
     </ButtonsWrapper>
   )
 }
