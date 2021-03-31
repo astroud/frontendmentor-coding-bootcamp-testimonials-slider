@@ -9,11 +9,16 @@ const BACKGROUND_PREV_SM = `background: url("data:image/svg+xml,%3Csvg width='9'
 export const ButtonsWrapper = styled.div`
 
   ${(props) => (props.large ? `
-    position: absolute;
-    left: 55vw;
-    top: 38.5rem;
+    position: relative;
+    left: 55%;
+    top: 40.5rem;
     z-index: 1;
-  ` : '')}
+  ` : `
+    position: relative;
+    left: calc(50% - 2.5rem);
+    top: 19.25rem;
+    z-index: 1;
+  `)}
   
   ${(props) => (props.large ? `` : `margin-top: -1.25rem;`)}
 
@@ -36,10 +41,9 @@ export const ButtonsWrapper = styled.div`
     }
 
   @media(max-width: 1050px) {
-    margin-top: -1.25rem;
     position: relative;
-    left: 0;
-    top: 0;
+    left: calc(50% - 2.5rem);
+    top: ${(props) => (props.large ? '18rem' : '')};
 
       button {
         width: 2.5rem;

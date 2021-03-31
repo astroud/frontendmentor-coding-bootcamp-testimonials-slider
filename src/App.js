@@ -28,22 +28,39 @@ const TESTIMONIALS = [{
   name: 'Tanya Sinclair',
   title: 'UX Engineer',
   photo: profileImg1,
+  id: 1234567,
 },
 {
   quote: '“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”',
   name: 'John Tarkpor',
   title: 'Junior Front-end Developer',
   photo: profileImg2,
-}]
+  id: 2345678,
+},
+{
+  quote: '“ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”',
+  name: 'John Tarkpor',
+  title: 'Junior Front-end Developer',
+  photo: profileImg2,
+  id: 45678910,
+},
+{
+  quote: '“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”',
+  name: 'Tanya Sinclair',
+  title: 'UX Engineer',
+  photo: profileImg1,
+  id: 3456789,
+},
+]
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <StyledWrapper>
-        <Slider testimonials={TESTIMONIALS} large />
+        <Slider testimonials={TESTIMONIALS.slice(0, 2)} large />
         <div style={{ height: '10rem' }} />
-        <Slider testimonials={[...TESTIMONIALS].reverse()} small />
+        <Slider testimonials={TESTIMONIALS.slice(2)} small />
       </StyledWrapper>
     </>
   )
