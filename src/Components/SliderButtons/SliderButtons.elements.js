@@ -11,7 +11,7 @@ export const ButtonsWrapper = styled.div`
   ${(props) => (props.large ? `
     position: relative;
     left: 55%;
-    top: 40.5rem;
+    top: 39rem;
     z-index: 1;
   ` : `
     position: relative;

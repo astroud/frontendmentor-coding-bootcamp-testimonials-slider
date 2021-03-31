@@ -26,7 +26,7 @@ const Slider = ({ testimonials, large }) => {
           classNames="slide"
         >
           <StyledSlider large={large}>
-            <Photo src={testimonials[slideIndex].photo} large={large} />
+            <Photo src={testimonials[slideIndex].photo} large={large} alt={`profile photo of ${testimonials[slideIndex].name}`} />
             <Quote large={large}>{testimonials[slideIndex].quote}</Quote>
             <Byline large={large}>
               <Name large={large}>
