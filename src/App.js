@@ -61,6 +61,7 @@ function App() {
         <Slider testimonials={TESTIMONIALS.slice(0, 2)} large />
         <div style={{ height: '10rem' }} />
         <Slider testimonials={TESTIMONIALS.slice(2)} small />
+        <div style={{ height: '5rem' }} />
       </StyledWrapper>
     </>
   )

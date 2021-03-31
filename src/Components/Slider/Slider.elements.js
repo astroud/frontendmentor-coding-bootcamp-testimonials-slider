@@ -27,7 +27,6 @@ export const StyledSlider = styled.div`
   @media(max-width: 1050px) {
     display: flex;
     padding: 1.5rem;
-    /* background: ${BACKGROUNDS_SMALL}; */
   }
 `
 
@@ -120,8 +119,8 @@ export const Background = styled.div`
   max-height: ${(props) => (props.large ? '50rem' : '41.7rem')};
 
   @media(max-width: 1050px) {
-    /* display: flex; */
-    /* padding: 1.5rem; */
+    overflow: none;
     background: ${BACKGROUNDS_SMALL};
+    max-height: 41.7rem;
   }
 `
